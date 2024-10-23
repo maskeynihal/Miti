@@ -15,8 +15,8 @@ const EventList: React.FC<{
   title?: string;
 }> = ({ events, isHoliday, title }) => {
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg">
-      <h2 className="text-xl font-bold text-gray-700 mb-2 text-center">
+    <div className="rounded-lg bg-white p-4 shadow-md">
+      <h2 className="mb-2 text-center text-xl font-bold text-gray-700">
         {title}
       </h2>
       <div className="space-y-4">

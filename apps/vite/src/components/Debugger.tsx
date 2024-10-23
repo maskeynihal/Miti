@@ -2,7 +2,7 @@ import React from 'react';
 
 const Debugger = () => {
   return (
-    <div className="fixed bottom-0 right-0 p-6 w-8 h-8 bg-white border flex justify-center items-center opacity-75">
+    <div className="fixed bottom-0 right-0 flex h-8 w-8 items-center justify-center border bg-white p-6 opacity-75">
       <div className="block sm:hidden md:hidden lg:hidden xl:hidden 2xl:hidden">
         XS
       </div>

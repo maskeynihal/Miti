@@ -1,11 +1,11 @@
 const AnnouncementAlert = () => {
   return (
     <div
-      className="flex items-center p-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400"
+      className="flex items-center rounded-lg bg-blue-50 p-4 text-sm text-blue-800 dark:bg-gray-800 dark:text-blue-400"
       role="alert"
     >
       <svg
-        className="flex-shrink-0 inline w-4 h-4 me-3"
+        className="me-3 inline h-4 w-4 flex-shrink-0"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"

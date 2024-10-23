@@ -8,11 +8,11 @@ const MetalPrice = () => {
     console.log(data);
   };
   return (
-    <div className="p-4 bg-white shadow-md rounded-lg flex-1">
-      <h2 className="text-lg font-semibold text-gray-800 mb-4">
+    <div className="flex-1 rounded-lg bg-white p-4 shadow-md">
+      <h2 className="mb-4 text-lg font-semibold text-gray-800">
         आजको सुन, चाँदीको दर
       </h2>
-      <p className="text-sm text-gray-600 mb-6">
+      <p className="mb-6 text-sm text-gray-600">
         कात्तिक ०४, २०८१ - 20 Oct, 2024
       </p>
       <MetalPriceCard

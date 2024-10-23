@@ -24,7 +24,7 @@ const PanchangSection = ({
 }) => {
   return (
     <div className={`mb-8`}>
-      <h3 className="text-lg font-bold text-gray-800 mb-2">{title}</h3>
+      <h3 className="mb-2 text-lg font-bold text-gray-800">{title}</h3>
       <div className={bgColor}>{children}</div>
     </div>
   );
@@ -32,7 +32,7 @@ const PanchangSection = ({
 
 const MuhuratItem = ({ name, time }: { name: string; time: string }) => {
   return (
-    <li className="flex justify-between p-4 text-red-600 text-start">
+    <li className="flex justify-between p-4 text-start text-red-600">
       <span>{name}</span>
       <span>{time}</span>
     </li>
@@ -42,7 +42,7 @@ const Panchang = () => {
   return (
     <div className="">
       {/* Header */}
-      <div className="flex items-center space-x-3 mb-6">
+      <div className="mb-6 flex items-center space-x-3">
         <h2 className="text-2xl font-bold text-gray-800">पञ्चाङ्ग</h2>
       </div>
       <div>

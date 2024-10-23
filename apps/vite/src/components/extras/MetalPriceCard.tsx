@@ -14,9 +14,9 @@ const MetalPriceCard: React.FC<MetalPriceCardProps> = ({
   unit,
 }) => {
   return (
-    <div className="flex items-center justify-between py-3 border-b last:border-none">
+    <div className="flex items-center justify-between border-b py-3 last:border-none">
       <div className="flex items-center">
-        <img src={metalImage} alt={metalName} className="w-10 h-10 mr-3" />
+        <img src={metalImage} alt={metalName} className="mr-3 h-10 w-10" />
         <div>
           <p className="font-semibold text-gray-700">{metalName}</p>
           <p className="text-sm text-gray-500">{unit}</p>

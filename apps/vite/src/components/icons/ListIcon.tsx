@@ -12,7 +12,7 @@ const ListIcon = () => {
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="fill-current w-4 h-4"
+      className="h-4 w-4 fill-current"
     >
       <line x1={8} y1={6} x2={21} y2={6} />
       <line x1={8} y1={12} x2={21} y2={12} />
