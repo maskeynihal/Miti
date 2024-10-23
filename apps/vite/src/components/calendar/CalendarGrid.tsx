@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const CalendarGrid: React.FC = () => {
   return (
@@ -24,12 +24,16 @@ const CalendarGrid: React.FC = () => {
               <div className="w-full flex flex-col">
                 <div className="flex flex-row justify-between">
                   <p className="text-xs text-gray-900">{index + 1}</p>
-                  <p className="text-xs text-gray-900 hidden xl:block">पूर्णिमा</p>
+                  <p className="text-xs text-gray-900 hidden xl:block">
+                    पूर्णिमा
+                  </p>
                 </div>
                 <p className="flex-1 flex w-full text-xl text-center font-semibold text-gray-900 justify-center items-center my-auto line-clamp-1">
                   {index + 1}
                 </p>
-                <p className="text-xs text-gray-900 text-center hidden xl:block">रमा एकादशी व्रत</p>
+                <p className="text-xs text-gray-900 text-center hidden xl:block">
+                  रमा एकादशी व्रत
+                </p>
               </div>
 
               {index % 3 === 0 && (
@@ -48,7 +52,7 @@ const CalendarGrid: React.FC = () => {
           ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CalendarGrid
+export default CalendarGrid;

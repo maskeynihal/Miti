@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prettier:list": "prettier --list-different .",
+    "prettier:fix": "prettier --write ."
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",

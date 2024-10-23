@@ -1,21 +1,24 @@
-import React from 'react'
-import { classNames } from '../../helper/utils'
+import React from 'react';
+import { classNames } from '../../helper/utils';
 
 interface Event {
-  date: string
-  day: string
-  title: string
-  daysLeft: number
-  fullDate: string
+  date: string;
+  day: string;
+  title: string;
+  daysLeft: number;
+  fullDate: string;
 }
 
-const UpcomingEvent: React.FC<{ event: Event; isHoliday?: boolean }> = ({ event, isHoliday }) => {
+const UpcomingEvent: React.FC<{ event: Event; isHoliday?: boolean }> = ({
+  event,
+  isHoliday,
+}) => {
   return (
     <div className="flex items-center space-x-4 border rounded-lg p-2 ">
       <div
         className={classNames(
           'rounded-lg text-center w-12 h-12 flex-row items-center justify-center',
-          isHoliday ? 'text-red-500 bg-red-50' : 'text-gray-700 bg-gray-200 '
+          isHoliday ? 'text-red-500 bg-red-50' : 'text-gray-700 bg-gray-200 ',
         )}
       >
         <p className="text-lg font-semibold">{event.date}</p>
@@ -26,7 +29,7 @@ const UpcomingEvent: React.FC<{ event: Event; isHoliday?: boolean }> = ({ event,
           <p
             className={classNames(
               'font-bold text-left flex-1',
-              isHoliday ? 'text-red-500' : 'text-gray-700'
+              isHoliday ? 'text-red-500' : 'text-gray-700',
             )}
           >
             {event.title}
@@ -38,7 +41,7 @@ const UpcomingEvent: React.FC<{ event: Event; isHoliday?: boolean }> = ({ event,
         <p className="text-xs text-gray-500">{event.fullDate}</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default UpcomingEvent
+export default UpcomingEvent;

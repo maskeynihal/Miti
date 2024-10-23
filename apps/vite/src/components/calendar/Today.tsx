@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { classNames } from '../../helper/utils'
-import Panchang from './Panchang'
+import React, { useState } from 'react';
+import { classNames } from '../../helper/utils';
+import Panchang from './Panchang';
 
 const Today = ({ isHoliday = true }: { isHoliday: boolean }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className=" bg-white shadow-md flex-row items-center border rounded-lg p-4">
       {/* Top Section */}
@@ -49,7 +49,7 @@ const Today = ({ isHoliday = true }: { isHoliday: boolean }) => {
       </div>
       {isOpen && <Panchang />}
     </div>
-  )
-}
+  );
+};
 
-export default Today
+export default Today;

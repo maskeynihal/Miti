@@ -1,28 +1,34 @@
-const PanchangTableRow = ({ label, value }: { label: string; value: string }) => {
+const PanchangTableRow = ({
+  label,
+  value,
+}: {
+  label: string;
+  value: string;
+}) => {
   return (
     <div className="flex justify-between">
       <p className="font-semibold">{label}:</p>
       <p>{value}</p>
     </div>
-  )
-}
+  );
+};
 
 const PanchangSection = ({
   title,
   children,
   bgColor,
 }: {
-  title: string
-  children: React.ReactNode
-  bgColor: string
+  title: string;
+  children: React.ReactNode;
+  bgColor: string;
 }) => {
   return (
     <div className={`mb-8`}>
       <h3 className="text-lg font-bold text-gray-800 mb-2">{title}</h3>
       <div className={bgColor}>{children}</div>
     </div>
-  )
-}
+  );
+};
 
 const MuhuratItem = ({ name, time }: { name: string; time: string }) => {
   return (
@@ -30,8 +36,8 @@ const MuhuratItem = ({ name, time }: { name: string; time: string }) => {
       <span>{name}</span>
       <span>{time}</span>
     </li>
-  )
-}
+  );
+};
 const Panchang = () => {
   return (
     <div className="">
@@ -65,7 +71,10 @@ const Panchang = () => {
       </PanchangSection>
 
       {/* Kala Muhurat Section */}
-      <PanchangSection title="आजको काल / मुहूर्तम्" bgColor="bg-red-100 rounded-lg">
+      <PanchangSection
+        title="आजको काल / मुहूर्तम्"
+        bgColor="bg-red-100 rounded-lg"
+      >
         <ul className="divide-y divide-red-200">
           <MuhuratItem name="गुलिक काल" time="०८:५७ - १०:२३" />
           <MuhuratItem name="दूर मुहूर्तम्" time="०९:५५ - १०:४०" />
@@ -77,7 +86,7 @@ const Panchang = () => {
         </ul>
       </PanchangSection>
     </div>
-  )
-}
+  );
+};
 
-export default Panchang
+export default Panchang;

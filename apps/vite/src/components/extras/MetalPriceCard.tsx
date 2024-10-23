@@ -1,13 +1,18 @@
-import React from 'react'
+import React from 'react';
 
 interface MetalPriceCardProps {
-  metalName: string
-  metalImage: string
-  price: number
-  unit: string
+  metalName: string;
+  metalImage: string;
+  price: number;
+  unit: string;
 }
 
-const MetalPriceCard: React.FC<MetalPriceCardProps> = ({ metalName, metalImage, price, unit }) => {
+const MetalPriceCard: React.FC<MetalPriceCardProps> = ({
+  metalName,
+  metalImage,
+  price,
+  unit,
+}) => {
   return (
     <div className="flex items-center justify-between py-3 border-b last:border-none">
       <div className="flex items-center">
@@ -23,7 +28,7 @@ const MetalPriceCard: React.FC<MetalPriceCardProps> = ({ metalName, metalImage, 
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MetalPriceCard
+export default MetalPriceCard;

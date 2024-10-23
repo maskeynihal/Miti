@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const bsYears = Array.from({ length: 100 }, (_, i) => 1975 + i) // Example range for B.S. years
+const bsYears = Array.from({ length: 100 }, (_, i) => 1975 + i); // Example range for B.S. years
 const months = [
   'बैशाख',
   'जेठ',
@@ -14,12 +14,12 @@ const months = [
   'माघ',
   'फाल्गुन',
   'चैत',
-]
+];
 
 const DateConverter: React.FC = () => {
-  const [year, setYear] = useState<number>(2081)
-  const [month, setMonth] = useState<string>('कार्तिक')
-  const [day, setDay] = useState<number>(1)
+  const [year, setYear] = useState<number>(2081);
+  const [month, setMonth] = useState<string>('कार्तिक');
+  const [day, setDay] = useState<number>(1);
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg flex-1">
@@ -86,9 +86,11 @@ const DateConverter: React.FC = () => {
         </div>
       </div>
 
-      <button className="w-full bg-blue-500 text-white py-2 rounded">परिवर्तन गर्नुहोस्</button>
+      <button className="w-full bg-blue-500 text-white py-2 rounded">
+        परिवर्तन गर्नुहोस्
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default DateConverter
+export default DateConverter;

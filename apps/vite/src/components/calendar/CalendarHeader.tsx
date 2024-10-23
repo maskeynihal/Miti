@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
-import { classNames } from '../../helper/utils'
-import EventIcon from '../icons/EventIcon'
-import ListIcon from '../icons/ListIcon'
+import React, { useState } from 'react';
+import { classNames } from '../../helper/utils';
+import EventIcon from '../icons/EventIcon';
+import ListIcon from '../icons/ListIcon';
 
-const CalendarHeader: React.FC<{ month: string; year: string }> = ({ month, year }) => {
-  const [view, setView] = useState<'calendar' | 'event'>('calendar')
+const CalendarHeader: React.FC<{ month: string; year: string }> = ({
+  month,
+  year,
+}) => {
+  const [view, setView] = useState<'calendar' | 'event'>('calendar');
   return (
     <div className="flex flex-col md:flex-row gap-4 items-center justify-between mb-5">
       <div className="w-full max-w-7xl">
@@ -15,7 +18,7 @@ const CalendarHeader: React.FC<{ month: string; year: string }> = ({ month, year
                 <button
                   className={classNames(
                     'inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 focus:text-blue-400 rounded-md px-2 py-2 active',
-                    view === 'calendar' ? 'bg-white' : ''
+                    view === 'calendar' ? 'bg-white' : '',
                   )}
                   id="grid"
                   onClick={() => setView('calendar')}
@@ -25,7 +28,7 @@ const CalendarHeader: React.FC<{ month: string; year: string }> = ({ month, year
                 <button
                   className={classNames(
                     'inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 focus:text-blue-400 rounded-md px-2 py-2',
-                    view === 'event' ? 'bg-white' : ''
+                    view === 'event' ? 'bg-white' : '',
                   )}
                   id="list"
                   onClick={() => setView('event')}
@@ -116,7 +119,7 @@ const CalendarHeader: React.FC<{ month: string; year: string }> = ({ month, year
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CalendarHeader
+export default CalendarHeader;
