@@ -1,15 +1,16 @@
 import { useEffect, useMemo, useState } from 'react';
-import MonthCalendar from '../components/MonthCalendar';
-import { fetchUserEvents } from '../helper/api';
-import YearMonthPicker from '../components/YearMonthPicker';
-import { useParams } from 'react-router-dom';
-import NepaliDate from 'nepali-datetime';
 import { useQuery } from '@tanstack/react-query';
-import Spinner from '../components/Spinner';
-import { CalendarData, Months } from '@miti/types';
-import { CalendarEventsResult } from '@miti/types';
-import UpcomingEvents from './UpcomingEvents';
+import NepaliDate from 'nepali-datetime';
+import { useParams } from 'react-router-dom';
+
 import { useYearlyData } from '@miti/query/calendar';
+import { CalendarData, CalendarEventsResult, Months } from '@miti/types';
+
+import MonthCalendar from '../components/MonthCalendar';
+import Spinner from '../components/Spinner';
+import YearMonthPicker from '../components/YearMonthPicker';
+import { fetchUserEvents } from '../helper/api';
+import UpcomingEvents from './UpcomingEvents';
 
 function Home() {
   const { BSYear, BSMonth, pageType = 'calendar' } = useParams();

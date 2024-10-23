@@ -1,6 +1,9 @@
 import NepaliDate from 'nepali-datetime';
-import SingleCalendarEvent from '../components/SingleCalendarEvent';
+
 import { DayData } from '@miti/types';
+
+import SingleCalendarEvent from '../components/SingleCalendarEvent';
+
 function UpcomingEvents({ monthData }: { monthData: DayData[] }) {
   return (
     <div className="lg:1/2 mb-4 mt-6 max-w-lg px-4">

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import UpcomingEvent from './UpcomingEvent';
 
 interface Event {

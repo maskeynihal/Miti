@@ -1,7 +1,8 @@
 import { Dispatch, Fragment, useMemo, useState } from 'react';
-import NepaliDate from 'nepali-datetime';
 import { Combobox, Transition } from '@headlessui/react';
-import { ChevronUpDownIcon, CheckIcon } from '@heroicons/react/20/solid';
+import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
+import NepaliDate from 'nepali-datetime';
+
 import nepaliDateData from '../constants/nepaliDateData';
 
 function Picker({
@@ -89,8 +90,8 @@ function Picker({
                       title == 'month'
                         ? (parseInt(item.value) + 1).toString()
                         : parseInt(item.value).toString()
-                        ? item.value
-                        : (parseInt(item.value) - 1).toString()
+                          ? item.value
+                          : (parseInt(item.value) - 1).toString()
                     }
                   >
                     {({ selected, active }) => (

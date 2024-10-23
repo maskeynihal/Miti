@@ -1,21 +1,22 @@
+import NepaliDate from 'nepali-datetime';
+import { CacheableResponsePlugin } from 'workbox-cacheable-response';
+import { ExpirationPlugin } from 'workbox-expiration';
+import * as googleAnalytics from 'workbox-google-analytics';
+import { precacheAndRoute } from 'workbox-precaching';
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst, NetworkFirst } from 'workbox-strategies';
+
+import { apiBaseUrl } from '../helper/api';
+
 declare const self: ServiceWorkerGlobalScope;
 
 interface PeriodicBackgroundSyncEvent extends ExtendableEvent {
   tag: string;
 }
 
-import { ExpirationPlugin } from 'workbox-expiration';
-import { precacheAndRoute } from 'workbox-precaching';
-import { registerRoute } from 'workbox-routing';
-import { CacheFirst, NetworkFirst } from 'workbox-strategies';
-import { CacheableResponsePlugin } from 'workbox-cacheable-response';
-import * as googleAnalytics from 'workbox-google-analytics';
-import NepaliDate from 'nepali-datetime';
-
 googleAnalytics.initialize();
 
 const UPDATE_CHECK = 'UPDATE_CHECK';
-import { apiBaseUrl } from '../helper/api';
 
 const checkForUpdates = async () => {
   const year = new NepaliDate().getYear();

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { toast } from 'react-hot-toast';
+
 import { apiBaseUrl } from '../helper/api';
 
 interface BeforeInstallPromptEvent extends Event {

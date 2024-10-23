@@ -1,21 +1,23 @@
 import { useEffect, useState } from 'react';
+import { Switch } from '@headlessui/react';
 import { CalendarIcon, PlusIcon } from '@heroicons/react/20/solid';
 import {
-  PencilSquareIcon,
-  MapPinIcon,
   Bars3BottomLeftIcon,
+  MapPinIcon,
+  PencilSquareIcon,
   SwatchIcon,
 } from '@heroicons/react/24/outline';
-import colors from '../constants/colors';
-import { Switch } from '@headlessui/react';
-import NepaliDatePicker from './NepaliDatePicker';
-import { useQueryClient, useMutation, useQuery } from '@tanstack/react-query';
-import { CalendarEvent } from '@miti/types';
-import { apiBaseUrl } from '../helper/api';
-import DropDown from './DropDown';
-import Spinner from './Spinner';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+
 import { useCalendarList } from '@miti/query/calendar';
 import { useCreateEvent } from '@miti/query/event';
+import { CalendarEvent } from '@miti/types';
+
+import colors from '../constants/colors';
+import { apiBaseUrl } from '../helper/api';
+import DropDown from './DropDown';
+import NepaliDatePicker from './NepaliDatePicker';
+import Spinner from './Spinner';
 
 function getCombinedDateTime(date: Date, time: string) {
   const timeParts = time.split(':');

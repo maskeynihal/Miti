@@ -1,19 +1,21 @@
-import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
 import {
+  Bars3BottomLeftIcon,
+  ClockIcon,
   MapPinIcon,
   TrashIcon,
-  Bars3BottomLeftIcon,
   XMarkIcon,
-  ClockIcon,
 } from '@heroicons/react/24/outline';
-import Spinner from './Spinner';
-import useLanguage from '../helper/useLanguage';
 import { useQueryClient } from '@tanstack/react-query';
-import { CalendarEvent } from '@miti/types';
-import { eventDuration } from '../helper/dates';
-import { apiBaseUrl } from '../helper/api';
+
 import { useDeleteEvent } from '@miti/query/event';
+import { CalendarEvent } from '@miti/types';
+
+import { apiBaseUrl } from '../helper/api';
+import { eventDuration } from '../helper/dates';
+import useLanguage from '../helper/useLanguage';
+import Spinner from './Spinner';
 
 export default function EventDetailsDialog({
   modalOpen,

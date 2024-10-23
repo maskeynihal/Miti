@@ -1,6 +1,7 @@
 import React from 'react';
-import MetalPriceCard from './MetalPriceCard';
+
 import fetchGoldSilverRates from '../../helper/bullions';
+import MetalPriceCard from './MetalPriceCard';
 
 const MetalPrice = () => {
   const handleClick = async () => {

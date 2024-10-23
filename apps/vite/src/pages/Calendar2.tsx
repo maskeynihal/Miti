@@ -1,6 +1,7 @@
 import React from 'react';
-import CalendarHeader from '../components/calendar/CalendarHeader';
+
 import CalendarGrid from '../components/calendar/CalendarGrid';
+import CalendarHeader from '../components/calendar/CalendarHeader';
 import EventList from '../components/calendar/EventList';
 import Today from '../components/calendar/Today';
 import Debugger from '../components/Debugger';

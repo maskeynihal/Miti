@@ -1,13 +1,13 @@
+import { useState, type ChangeEvent } from 'react';
 import { ArrowsRightLeftIcon } from '@heroicons/react/20/solid';
+import { format } from 'date-fns';
 import NepaliDate from 'nepali-datetime';
+
 import NepaliDatePicker from '../components/NepaliDatePicker';
 import { np_nepaliMonths as nepaliMonths } from '../constants/mahina';
 import nepaliNumber from '../helper/nepaliNumber';
-
-import { type ChangeEvent, useState } from 'react';
 import useLanguage from '../helper/useLanguage';
 
-import { format } from 'date-fns';
 const DateConverter = () => {
   const [date, setDate] = useState(new Date());
   const nepaliDate = new NepaliDate(date);

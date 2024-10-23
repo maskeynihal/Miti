@@ -1,7 +1,12 @@
-import NepaliDate from 'nepali-datetime';
 import { useEffect, useMemo, useState } from 'react';
+import NepaliDate from 'nepali-datetime';
 import { Link } from 'react-router-dom';
+
+import { useUser } from '@miti/query/user';
+import type { CalendarEventsResult, DayData } from '@miti/types';
+
 import colors from '../constants/colors';
+import { apiBaseUrl } from '../helper/api';
 import {
   getChandramaEnglish,
   getChandramaNepali,
@@ -11,13 +16,9 @@ import {
 } from '../helper/dates';
 import nepaliNumber from '../helper/nepaliNumber';
 import useLanguage from '../helper/useLanguage';
-import { useUser } from '@miti/query/user';
 import { classNames } from '../helper/utils';
-import type { DayData } from '@miti/types';
-import type { CalendarEventsResult } from '@miti/types';
 import AddEventModal from './AddEventModal';
 import SingleUserEvent from './SingleUserEvent';
-import { apiBaseUrl } from '../helper/api';
 
 const getEventsOfSelectedDay = (events: CalendarEventsResult, day: Date) => {
   if (!events || !events.events.length) return [];
